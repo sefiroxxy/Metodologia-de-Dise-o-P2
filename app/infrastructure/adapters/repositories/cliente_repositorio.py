@@ -28,7 +28,6 @@ class ClienteRepositorio(ClienteRepositorioBase):
 
     def update(self, cliente_id: int, cliente: Cliente) -> Optional[Cliente]:
         if cliente_id in self.db:
-            # Asegura que el ID en el objeto cliente se mantenga consistente
             cliente.id = cliente_id
             self.db[cliente_id] = cliente.dict()
             return cliente

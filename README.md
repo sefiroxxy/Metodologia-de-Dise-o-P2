@@ -1,4 +1,12 @@
 # Metodologia de Diseño P2
 Es el proyecto 2 con sus cambios y operaciones respectivas
 
-PRUEBA CAMBIO
+Integrantes:
+- Latuz Zepeda
+- Maycol Zincker
+- Dietrich Ganz
+
+Estructura del archivo: 
+
+
+

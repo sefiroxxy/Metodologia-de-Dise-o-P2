@@ -20,7 +20,6 @@ class PedidoServicio:
         return self.pedido_repo.get_all(skip, limit)
 
     def create_pedido(self, pedido: Pedido) -> Pedido:
-        # Aquí se podrían añadir validaciones adicionales, como verificar si cliente_id y productos_ids existen
         return self.pedido_repo.create(pedido)
 
     def update_pedido(self, pedido_id: int, pedido: Pedido) -> Pedido:

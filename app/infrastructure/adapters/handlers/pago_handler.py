@@ -30,7 +30,7 @@ async def get_all_pagos_handler(
 ):
     return pago_service.get_todos_los_pagos(skip=skip, limit=limit)
 
-@router.put("/pagos/{pago_id}", response_model=Pago)
+@router.patch("/pagos/{pago_id}", response_model=Pago)
 async def update_pago_handler(
     pago_id: int,
     pago_update: PagoUpdate,

@@ -32,7 +32,6 @@ class ClienteServicio:
         if not existing_cliente:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Cliente con ID {cliente_id} no encontrado.")
         
-        # Si el email se actualiza, verificar que no haya duplicados
         if cliente.email != existing_cliente.email and self.cliente_repo.get_by_email(cliente.email):
             raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=f"Ya existe otro cliente con el email {cliente.email}.")
             

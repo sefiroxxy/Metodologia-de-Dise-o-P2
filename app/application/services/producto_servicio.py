@@ -17,7 +17,6 @@ class ProductoServicio:
         return self.producto_repo.get_all(skip, limit)
 
     def create_producto(self, producto: Producto) -> Producto:
-        # Opcional: verificar si ya existe un producto con el mismo nombre
         if self.producto_repo.get_by_nombre(producto.nombre):
             raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=f"Ya existe un producto con el nombre '{producto.nombre}'.")
         return self.producto_repo.create(producto)

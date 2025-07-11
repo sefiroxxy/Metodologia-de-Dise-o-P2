@@ -37,7 +37,7 @@ async def update_cliente_handler(
     cliente_service: ClienteServicio = Depends(get_cliente_service)
 ):
     cliente_data = cliente_update.dict(exclude_unset=True)
-    existing_cliente = cliente_service.get_cliente(cliente_id) # Obtener para conservar datos no actualizados
+    existing_cliente = cliente_service.get_cliente(cliente_id)
     for key, value in cliente_data.items():
         setattr(existing_cliente, key, value)
     return cliente_service.update_cliente(cliente_id, existing_cliente)

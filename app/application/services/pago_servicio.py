@@ -20,7 +20,6 @@ class PagoServicio:
         return self.pago_repo.get_all(skip, limit)
 
     def create_pago(self, pago: Pago) -> Pago:
-        # Aquí se podrían añadir validaciones adicionales, como verificar si el pedido_id existe
         return self.pago_repo.create(pago)
 
     def update_pago(self, pago_id: int, pago: Pago) -> Pago:

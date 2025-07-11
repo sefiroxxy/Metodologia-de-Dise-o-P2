@@ -30,7 +30,7 @@ async def get_all_productos_handler(
 ):
     return producto_service.get_todos_los_productos(skip=skip, limit=limit)
 
-@router.put("/productos/{producto_id}", response_model=Producto)
+@router.patch("/productos/{producto_id}", response_model=Producto)
 async def update_producto_handler(
     producto_id: int,
     producto_update: ProductoUpdate,

@@ -12,7 +12,6 @@ from app.application.services.pago_servicio import PagoServicio
 from app.application.services.pedido_servicio import PedidoServicio
 from app.application.services.producto_servicio import ProductoServicio
 
-# Dependencias para los repositorios
 def get_cliente_repository() -> ClienteRepositorio:
     return ClienteRepositorio(clientes_db, get_next_cliente_id)
 
@@ -25,7 +24,6 @@ def get_pedido_repository() -> PedidoRepositorio:
 def get_producto_repository() -> ProductoRepositorio:
     return ProductoRepositorio(productos_db, get_next_producto_id)
 
-# Dependencias para los servicios (usando los repositorios)
 def get_cliente_service() -> ClienteServicio:
     return ClienteServicio(get_cliente_repository())
 

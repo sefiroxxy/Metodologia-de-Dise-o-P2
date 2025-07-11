@@ -30,7 +30,7 @@ async def get_all_pedidos_handler(
 ):
     return pedido_service.get_todos_los_pedidos(skip=skip, limit=limit)
 
-@router.put("/pedidos/{pedido_id}", response_model=Pedido)
+@router.patch("/pedidos/{pedido_id}", response_model=Pedido)
 async def update_pedido_handler(
     pedido_id: int,
     pedido_update: PedidoUpdate,
